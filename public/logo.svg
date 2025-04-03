@@ -1,0 +1,47 @@
+<svg
+				width='300'
+				height='100'
+				viewBox='0 0 300 100'
+				xmlns='http://www.w3.org/2000/svg'>
+				<style>
+					{`
+						@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+						text {
+							font-family: 'Montserrat', sans-serif;
+							font-size: 32px;
+							font-weight: 900;
+							fill: #FFD700; /* Gold color for high contrast */
+							text-anchor: middle;
+							dominant-baseline: middle;
+							opacity: 0;
+							animation: dropFade 2s ease-in-out infinite alternate;
+						}
+
+						@keyframes dropFade {
+							0% { opacity: 0; transform: translateY(-30px) scale(0.9); }
+							50% { opacity: 1; transform: translateY(0px) scale(1); }
+							100% { opacity: 0.8; transform: translateY(10px) scale(1.05); }
+						}
+
+						circle {
+							fill: none;
+							stroke: #FFD700;
+							stroke-width: 4;
+							stroke-dasharray: 200;
+							stroke-dashoffset: 200;
+							animation: drawCircle 2s infinite alternate ease-in-out;
+						}
+
+						@keyframes drawCircle {
+							0% { stroke-dashoffset: 200; opacity: 0.5; }
+							100% { stroke-dashoffset: 0; opacity: 1; }
+						}
+					`}
+				</style>
+
+				<circle cx='150' cy='50' r='45' />
+				<text x='150' y='55'>
+					IntelliNotes
+				</text>
+			</svg>
